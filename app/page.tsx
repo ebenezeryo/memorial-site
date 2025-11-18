@@ -107,19 +107,19 @@ export default function Home() {
           <form onSubmit={handleRSVP} className="max-w-2xl mx-auto space-y-6">
             <div>
               <label className="block text-gray-800 font-bold mb-2">Full Name *</label>
-              <input type="text" name="name" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none" />
+              <input type="text" name="name" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none text-gray-800 placeholder:text-gray-400" />
             </div>
             <div>
               <label className="block text-gray-800 font-bold mb-2">Phone Number *</label>
-              <input type="tel" name="phone" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none" />
+              <input type="tel" name="phone" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none text-gray-800 placeholder:text-gray-400" />
             </div>
             <div>
               <label className="block text-gray-800 font-bold mb-2">Email Address *</label>
-              <input type="email" name="email" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none" />
+              <input type="email" name="email" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none text-gray-800 placeholder:text-gray-400" />
             </div>
             <div>
               <label className="block text-gray-800 font-bold mb-2">Relationship to Family *</label>
-              <input type="text" name="relationship" placeholder="e.g., Friend, Colleague, Family" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none" />
+              <input type="text" name="relationship" placeholder="e.g., Friend, Colleague, Family" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none text-gray-800 placeholder:text-gray-400" />
             </div>
             <button type="submit" className="w-full py-4 bg-gradient-to-r from-gray-700 to-gray-600 text-yellow-500 font-bold text-lg rounded-lg hover:shadow-lg transition-all">
               Submit RSVP
@@ -140,11 +140,11 @@ export default function Home() {
           <form onSubmit={handleMessage} className="max-w-2xl mx-auto space-y-6 mb-12">
             <div>
               <label className="block text-gray-800 font-bold mb-2">Your Name *</label>
-              <input type="text" name="messageName" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none" />
+              <input type="text" name="messageName" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none text-gray-800 placeholder:text-gray-400" />
             </div>
             <div>
               <label className="block text-gray-800 font-bold mb-2">Your Message *</label>
-              <textarea name="messageText" rows={4} placeholder="Share your memories, prayers, or tributes..." required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none"></textarea>
+              <textarea name="messageText" rows={4} placeholder="Share your memories, prayers, or tributes..." required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none text-gray-800 placeholder:text-gray-400"></textarea>
             </div>
             <button type="submit" className="w-full py-4 bg-gradient-to-r from-gray-700 to-gray-600 text-yellow-500 font-bold text-lg rounded-lg hover:shadow-lg transition-all">
               Post Message
