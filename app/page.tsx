@@ -40,30 +40,47 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800">
       <div className="max-w-5xl mx-auto bg-white shadow-2xl">
-        <header className="bg-gradient-to-br from-gray-700 to-gray-600 text-white text-center py-16 px-6 relative overflow-hidden">
+        <header className="bg-gradient-to-br from-gray-700 to-gray-600 text-white py-16 px-6 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-radial from-yellow-600/10 via-transparent to-transparent"></div>
-          <div className="relative z-10">
-            <div className="text-6xl mb-6 animate-bounce">🕊️</div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-lg">Celebration of a Life Well Spent</h1>
-            <h2 className="text-3xl md:text-4xl font-light mb-2">Snr. Apostolic Mother Florence Modupe Akintunde</h2>
-            <p className="text-xl italic mb-6 opacity-90">(née Oyeleye)</p>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-6"></div>
-            <p className="text-lg italic opacity-95">Aged 73 Years | Slept in the Lord on 29th August, 2025</p>
+          <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="text-center md:text-left order-2 md:order-1">
+                <div className="text-6xl mb-6 animate-bounce">🕊️</div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-lg">Celebration of a Life Well Spent</h1>
+                <h2 className="text-3xl md:text-4xl font-light mb-2">Snr. Apostolic Mother Florence Modupe Akintunde</h2>
+                <p className="text-xl italic mb-6 opacity-90">(née Oyeleye)</p>
+                <div className="w-24 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto md:mx-0 mb-6"></div>
+                <p className="text-lg italic opacity-95">Aged 73 Years | Slept in the Lord on 29th August, 2025</p>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-yellow-500/20 rounded-lg transform rotate-3"></div>
+                  <img 
+                    src="/mama akin3.jpg" 
+                    alt="Snr. Apostolic Mother Florence Modupe Akintunde" 
+                    className="relative rounded-lg shadow-2xl w-full border-4 border-yellow-500"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </header>
 
-        {/* Memorial Photo Section */}
-        <section className="py-12 px-6 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-gray-600/20 rounded-lg transform rotate-3"></div>
-              <img 
-                src="/mama_akin.png" 
-                alt="Snr. Apostolic Mother Florence Modupe Akintunde" 
-                className="relative rounded-lg shadow-2xl max-w-md w-full mx-auto border-4 border-yellow-500"
-              />
+        {/* Photo Gallery - Auto Scrolling */}
+        <section className="py-12 px-6 bg-white overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-3xl font-bold text-center text-yellow-600 mb-8">Cherished Memories</h3>
+            <div className="relative">
+              <div className="flex gap-6 animate-scroll">
+                <img src="/mama akin1.jpg" alt="Memory 1" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama akin2.jpg" alt="Memory 2" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama_akin.png" alt="Memory 3" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama akin1.jpg" alt="Memory 1" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama akin2.jpg" alt="Memory 2" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama_akin.png" alt="Memory 3" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+              </div>
             </div>
-            <p className="mt-6 text-gray-600 italic text-lg">
+            <p className="mt-8 text-center text-gray-600 italic text-lg">
               &quot;A life of faith, grace, and unwavering love&quot;
             </p>
           </div>
