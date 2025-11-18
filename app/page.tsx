@@ -79,7 +79,12 @@ export default function Home() {
                 <img src="/IMG-20251118-WA0011.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/IMG-20251118-WA0012.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/IMG-20251118-WA0013.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/IMG-20251118-WA0014.j
+                <img src="/IMG-20251118-WA0014.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama akin1.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama akin2.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama_akin.png" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+              </div>
+            </div>
             <p className="mt-8 text-center text-gray-600 italic text-lg">
               &quot;A life of faith, grace, and unwavering love&quot;
             </p>
