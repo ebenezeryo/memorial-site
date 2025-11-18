@@ -58,7 +58,7 @@ export default function Home() {
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-gray-600/20 rounded-lg transform rotate-3"></div>
               <img 
-                src="/mama akin.jpg" 
+                src="/mama_akin.png" 
                 alt="Snr. Apostolic Mother Florence Modupe Akintunde" 
                 className="relative rounded-lg shadow-2xl max-w-md w-full mx-auto border-4 border-yellow-500"
               />
