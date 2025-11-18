@@ -52,6 +52,23 @@ export default function Home() {
           </div>
         </header>
 
+        {/* Memorial Photo Section */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-gray-600/20 rounded-lg transform rotate-3"></div>
+              <img 
+                src="/mama akin.jpg" 
+                alt="Snr. Apostolic Mother Florence Modupe Akintunde" 
+                className="relative rounded-lg shadow-2xl max-w-md w-full mx-auto border-4 border-yellow-500"
+              />
+            </div>
+            <p className="mt-6 text-gray-600 italic text-lg">
+              &quot;A life of faith, grace, and unwavering love&quot;
+            </p>
+          </div>
+        </section>
+
         <section className="py-16 px-6 md:px-12 bg-gray-50">
           <h3 className="text-4xl font-bold text-center text-yellow-600 mb-3">Obsequies</h3>
           <p className="text-center text-gray-700 font-semibold mb-12">The family of AKINTUNDE cordially invites you</p>
