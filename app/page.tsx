@@ -68,18 +68,18 @@ export default function Home() {
 
         {/* Photo Gallery - Auto Scrolling */}
         <section className="py-12 px-6 bg-white overflow-hidden">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-full mx-auto">
             <h3 className="text-3xl font-bold text-center text-yellow-600 mb-8">Cherished Memories</h3>
             <div className="relative">
               <div className="flex gap-6 animate-scroll">
-                <img src="/mama akin1.jpg" alt="Memory 1" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama akin2.jpg" alt="Memory 2" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama_akin.png" alt="Memory 3" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama akin1.jpg" alt="Memory 1" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama akin2.jpg" alt="Memory 2" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama_akin.png" alt="Memory 3" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-              </div>
-            </div>
+                <img src="/mama akin1.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama akin2.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/mama_akin.png" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0010.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0011.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0012.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0013.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0014.j
             <p className="mt-8 text-center text-gray-600 italic text-lg">
               &quot;A life of faith, grace, and unwavering love&quot;
             </p>
