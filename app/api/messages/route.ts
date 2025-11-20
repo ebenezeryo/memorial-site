@@ -29,6 +29,21 @@ export async function POST(request: Request) {
       timestamp: data.timestamp
     });
     
+    // Send to Google Sheets if URL is configured
+    const googleScriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+    if (googleScriptUrl) {
+      try {
+        await fetch(googleScriptUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...data, type: 'message' })
+        });
+      } catch (googleError) {
+        console.error('Google Sheets error:', googleError);
+        // Continue even if Google Sheets fails
+      }
+    }
+    
     return NextResponse.json({ 
       success: true, 
       message: 'Message posted successfully',
