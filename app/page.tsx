@@ -22,7 +22,8 @@ export default function Home() {
 
   const handleRSVP = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const name = formData.get('name');
     const phone = formData.get('phone');
     const email = formData.get('email');
@@ -37,7 +38,7 @@ export default function Home() {
       
       if (response.ok) {
         setRsvpMessage(`Thank you, ${name}. Your RSVP has been received. We look forward to seeing you.`);
-        e.currentTarget.reset();
+        form.reset();
         setTimeout(() => setRsvpMessage(''), 5000);
       }
     } catch (error) {
@@ -48,7 +49,8 @@ export default function Home() {
 
   const handleMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const name = formData.get('messageName') as string;
     const text = formData.get('messageText') as string;
     
@@ -62,7 +64,7 @@ export default function Home() {
       if (response.ok) {
         setMessages([{ text, author: name }, ...messages]);
         setMessageStatus('Your message has been posted. Thank you for your kind words.');
-        e.currentTarget.reset();
+        form.reset();
         setTimeout(() => setMessageStatus(''), 5000);
       }
     } catch (error) {
