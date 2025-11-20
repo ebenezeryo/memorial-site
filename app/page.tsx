@@ -249,5 +249,3 @@ export default function Home() {
     </div>
   );
 }
-                <img src="/IMG-20251118-WA0023.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/IMG-20251118-WA0024.jpg" alt="Memory" c
