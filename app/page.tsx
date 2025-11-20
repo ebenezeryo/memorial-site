@@ -14,7 +14,7 @@ export default function Home() {
       .then(res => res.json())
       .then(data => {
         if (data.success && data.messages) {
-          setMessages(data.messages.map((m: unknown) => ({ text: m.text, author: m.name })));
+          setMessages(data.messages.map((m: { text: string; name: string }) => ({ text: m.text, author: m.name })));
         }
       })
       .catch(err => console.error('Failed to load messages:', err));
