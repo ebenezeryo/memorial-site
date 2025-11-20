@@ -16,25 +16,55 @@ export default function Home() {
     }
   ]);
 
-  const handleRSVP = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleRSVP = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const name = formData.get('name');
-    setRsvpMessage(`Thank you, ${name}. Your RSVP has been received. We look forward to seeing you.`);
-    e.currentTarget.reset();
-    setTimeout(() => setRsvpMessage(''), 5000);
+    const phone = formData.get('phone');
+    const email = formData.get('email');
+    const relationship = formData.get('relationship');
+    
+    try {
+      const response = await fetch('/api/rsvp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, email, relationship, timestamp: new Date().toISOString() })
+      });
+      
+      if (response.ok) {
+        setRsvpMessage(`Thank you, ${name}. Your RSVP has been received. We look forward to seeing you.`);
+        e.currentTarget.reset();
+        setTimeout(() => setRsvpMessage(''), 5000);
+      }
+    } catch (error) {
+      console.error('RSVP submission error:', error);
+      setRsvpMessage('There was an error submitting your RSVP. Please try again.');
+    }
   };
 
-  const handleMessage = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const name = formData.get('messageName') as string;
     const text = formData.get('messageText') as string;
     
-    setMessages([{ text, author: name }, ...messages]);
-    setMessageStatus('Your message has been posted. Thank you for your kind words.');
-    e.currentTarget.reset();
-    setTimeout(() => setMessageStatus(''), 5000);
+    try {
+      const response = await fetch('/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, text, timestamp: new Date().toISOString() })
+      });
+      
+      if (response.ok) {
+        setMessages([{ text, author: name }, ...messages]);
+        setMessageStatus('Your message has been posted. Thank you for your kind words.');
+        e.currentTarget.reset();
+        setTimeout(() => setMessageStatus(''), 5000);
+      }
+    } catch (error) {
+      console.error('Message submission error:', error);
+      setMessageStatus('There was an error posting your message. Please try again.');
+    }
   };
 
   return (
