@@ -1,13 +1,33 @@
 import { NextResponse } from 'next/server';
 
+// In-memory storage (resets on deployment, but good for demo)
+// For production, use a database like Vercel KV, Postgres, or MongoDB
+let storedMessages: Array<{ name: string; text: string; timestamp: string }> = [
+  {
+    name: "The Church Community",
+    text: "Snr. Apostolic Mother was a pillar of faith and strength. Her dedication to the Lord and her family was unwavering. May her soul rest in perfect peace.",
+    timestamp: new Date().toISOString()
+  },
+  {
+    name: "Friends & Well-wishers",
+    text: "A woman of grace, dignity, and unwavering faith. We celebrate 73 years of a life well spent. Sleep well, Mama.",
+    timestamp: new Date().toISOString()
+  }
+];
+
 export async function POST(request: Request) {
   try {
     const data = await request.json();
     
-    // Log the message
-    console.log('Message Received:', data);
+    // Add to stored messages
+    storedMessages.unshift(data);
     
-    // You can integrate with email services or database here
+    // Log the message for admin viewing
+    console.log('Farewell Message Received:', {
+      name: data.name,
+      message: data.text,
+      timestamp: data.timestamp
+    });
     
     return NextResponse.json({ 
       success: true, 
@@ -24,7 +44,9 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
-  // Return stored messages
-  // For now, return empty array
-  return NextResponse.json({ messages: [] });
+  // Return all stored messages
+  return NextResponse.json({ 
+    success: true,
+    messages: storedMessages 
+  });
 }

@@ -1,20 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [rsvpMessage, setRsvpMessage] = useState('');
   const [messageStatus, setMessageStatus] = useState('');
-  const [messages, setMessages] = useState([
-    {
-      text: "Snr. Apostolic Mother was a pillar of faith and strength. Her dedication to the Lord and her family was unwavering. May her soul rest in perfect peace.",
-      author: "The Church Community"
-    },
-    {
-      text: "A woman of grace, dignity, and unwavering faith. We celebrate 73 years of a life well spent. Sleep well, Mama.",
-      author: "Friends & Well-wishers"
-    }
-  ]);
+  const [messages, setMessages] = useState<Array<{ text: string; author: string }>>([]);
+
+  // Load messages on page load
+  useEffect(() => {
+    fetch('/api/messages')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.messages) {
+          setMessages(data.messages.map((m: any) => ({ text: m.text, author: m.name })));
+        }
+      })
+      .catch(err => console.error('Failed to load messages:', err));
+  }, []);
 
   const handleRSVP = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
