@@ -25,19 +25,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* Custom scrollbar for photo gallery */
+#photo-scroll::-webkit-scrollbar {
+  height: 8px;
 }
 
-.animate-scroll-fast {
-  animation: scroll 25s linear infinite;
+#photo-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-.animate-scroll-fast:hover {
-  animation-play-state: paused;
+#photo-scroll::-webkit-scrollbar-thumb {
+  background: #DAA520;
+  border-radius: 10px;
+}
+
+#photo-scroll::-webkit-scrollbar-thumb:hover {
+  background: #B8860B;
 }

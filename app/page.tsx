@@ -6,6 +6,7 @@ export default function Home() {
   const [rsvpMessage, setRsvpMessage] = useState('');
   const [messageStatus, setMessageStatus] = useState('');
   const [messages, setMessages] = useState<Array<{ text: string; author: string }>>([]);
+  const scrollContainerRef = useState<HTMLDivElement | null>(null)[0];
 
   // Load messages on page load
   useEffect(() => {
@@ -103,8 +104,36 @@ export default function Home() {
         <section className="py-12 px-6 bg-white overflow-hidden">
           <div className="max-w-full mx-auto">
             <h3 className="text-3xl font-bold text-center text-yellow-600 mb-8">Cherished Memories</h3>
-            <div className="relative">
-              <div className="flex gap-6 animate-scroll-fast">
+            <div className="relative group">
+              {/* Left Arrow */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('photo-scroll');
+                  if (container) container.scrollBy({ left: -400, behavior: 'smooth' });
+                }}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700 text-yellow-500 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Scroll left"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              {/* Right Arrow */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('photo-scroll');
+                  if (container) container.scrollBy({ left: 400, behavior: 'smooth' });
+                }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700 text-yellow-500 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Scroll right"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              
+              <div id="photo-scroll" className="flex gap-6 overflow-x-auto scroll-smooth pb-4" style={{ scrollbarWidth: 'thin' }}>
                 <img src="/mama akin1.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/mama akin2.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/mama_akin.png" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
