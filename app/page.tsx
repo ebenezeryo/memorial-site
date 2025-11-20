@@ -45,7 +45,7 @@ export default function Home() {
           <div className="relative z-10 max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-center md:text-left order-2 md:order-1">
-                <div className="text-6xl mb-6 animate-bounce">🕊️</div>
+                <div className="text-6xl mb-6 animate-bounce flex justify-center md:justify-start">🕊️</div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-lg">Celebration of a Life Well Spent</h1>
                 <h2 className="text-3xl md:text-4xl font-light mb-2">Snr. Apostolic Mother Florence Modupe Akintunde</h2>
                 <p className="text-xl italic mb-6 opacity-90">(née Oyeleye)</p>
@@ -71,7 +71,7 @@ export default function Home() {
           <div className="max-w-full mx-auto">
             <h3 className="text-3xl font-bold text-center text-yellow-600 mb-8">Cherished Memories</h3>
             <div className="relative">
-              <div className="flex gap-6 animate-scroll">
+              <div className="flex gap-6 animate-scroll-fast">
                 <img src="/mama akin1.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/mama akin2.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/mama_akin.png" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
@@ -80,9 +80,42 @@ export default function Home() {
                 <img src="/IMG-20251118-WA0012.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/IMG-20251118-WA0013.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
                 <img src="/IMG-20251118-WA0014.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama akin1.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama akin2.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
-                <img src="/mama_akin.png" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0015.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0016.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0017.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0018.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0019.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0020.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0021.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0022.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0023.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0024.JPG" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0013.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0014.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0015.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0016.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0017.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0018.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0019.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0020.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0021.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0022.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0023.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0024.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0025.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0026.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0027.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0028.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0029.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0030.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0031.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0032.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0033.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0036.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0037.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0038.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0039.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0040.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
               </div>
             </div>
             <p className="mt-8 text-center text-gray-600 italic text-lg">
@@ -216,3 +249,5 @@ export default function Home() {
     </div>
   );
 }
+                <img src="/IMG-20251118-WA0023.jpg" alt="Memory" className="h-80 w-auto rounded-lg shadow-lg border-2 border-yellow-500" />
+                <img src="/IMG-20251118-WA0024.jpg" alt="Memory" c
